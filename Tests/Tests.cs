@@ -13,8 +13,7 @@ namespace Tests
         [Fact]
         public void ShouldReturnFizz()
         {
-            // should add option to return 0
-            var baseNumber = ReturnDivisibleNumber(15);
+            var baseNumber = ReturnDivisibleNumber(15, 0);
             var divisbleBy3List = GenerateListWithDivisibleNumbers(3, 15);
             var testNumber = baseNumber + divisbleBy3List[ReturnRandomNumber(divisbleBy3List.Count)];
 
@@ -26,8 +25,7 @@ namespace Tests
         [Fact]
         public void ShouldReturnBuzz()
         {
-            // should add option to return 0
-            var baseNumber = ReturnDivisibleNumber(15);
+            var baseNumber = ReturnDivisibleNumber(15, 0);
             var divisbleBy5List = GenerateListWithDivisibleNumbers(5, 15);
             var testNumber = baseNumber + divisbleBy5List[ReturnRandomNumber(divisbleBy5List.Count)];
 
@@ -39,7 +37,7 @@ namespace Tests
         [Fact]
         public void ShouldReturnFizzBuzz()
         {
-            
+
             var generatedNumber = ReturnDivisibleNumber(15);
 
             var fizzBuzzResult = FizzBuzzHandler.Handle(generatedNumber);
@@ -77,9 +75,8 @@ namespace Tests
 
         }
 
-        private int ReturnDivisibleNumber(int number)
+        private int ReturnDivisibleNumber(int number, int lowerBound = 1)
         {
-            var lowerBound = 1;
             var generatedNumber = ReturnRandomNumber(boundary / number, lowerBound) * number;
             return generatedNumber;
         }
