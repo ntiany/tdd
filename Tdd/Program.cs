@@ -6,7 +6,11 @@ namespace Tdd
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int boundary = 100;
+            for (int i = 1; i < boundary; i++)
+            {
+                Console.WriteLine(FizzBuzzHandler.Handle(i));
+            }
         }
     }
 }
