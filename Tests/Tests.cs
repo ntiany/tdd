@@ -43,7 +43,7 @@ namespace Tests
         {
             var generatedNumber = ReturnDivisableNumber(15);
             var testNumber = generatedNumber + 1;
-            var fizzBuzzResult = FizzBuzzHandler.Handle(generatedNumber);
+            var fizzBuzzResult = FizzBuzzHandler.Handle(testNumber);
 
             Assert.Equal(fizzBuzzResult, testNumber.ToString());
 
